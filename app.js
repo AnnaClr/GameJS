@@ -2,11 +2,11 @@ let listaDeNumerosSorteados = [];
 const numeroLimite = 100;
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
-console.log(numeroSecreto);
+// console.log(numeroSecreto);
 
 function exibirTextoNaTela(tag, texto) {
   document.querySelector(tag).innerHTML = texto;
-  responsiveVoice.speak(texto, 'Brazilian Portuguese Female');
+  // responsiveVoice.speak(texto, 'Brazilian Portuguese Female');
 }
 
 exibirTextoNaTela("h1", "Jogo do Número Secreto!");
@@ -23,7 +23,7 @@ function gerarNumeroAleatorio() {
   } while (listaDeNumerosSorteados.includes(numeroEscolhido));
 
   listaDeNumerosSorteados.push(numeroEscolhido);
-  console.log(listaDeNumerosSorteados);
+  // console.log(listaDeNumerosSorteados);
   return numeroEscolhido;
 }
 
@@ -53,7 +53,7 @@ function verificarChute() {
 function reiniciarJogo() {
   numeroSecreto = gerarNumeroAleatorio();
   tentativas = 1;
-  console.log(numeroSecreto);
+  // console.log(numeroSecreto);
   exibirTextoNaTela("h1", "Jogo do Número Secreto!");
   exibirTextoNaTela("p", "Escolha um número entre 1 e 100:");
   document.querySelector("input").value = '';
